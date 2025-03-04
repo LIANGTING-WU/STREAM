@@ -6,8 +6,11 @@
 
 點擊下方按鈕直接在 Google Colab 上開啟 Notebook：
 
-[![在 Colab 上開啟](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_sensing.ipynb)
+[![在 Colab 上開啟](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_sensing_Multiple.ipynb)
+
 [![在 Colab 上開啟](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Single.ipynb)
+
+[![在 Colab 上開啟](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_3D.ipynb)
 
 ## 📂 專案內容
 - `Gas_sensing.ipynb`：Google Colab Notebook，包含氣體感測數據分析與模擬程式碼。
