@@ -1,31 +1,39 @@
 # Gas Sensing Project
 
-這是一個關於氣體感測（Gas Sensing）的研究專案，包含數據分析與模擬計算。
+This project provides a set of Python notebooks for analyzing and visualizing gas sensor data as well as electrical measurements from gas sensing experiments. The tools aim to facilitate data processing, feature extraction, and insightful visualization for various gas sensing scenarios.
 
-## 📌 Google Colab 連結
+## Notebooks Overview
 
-點擊下方按鈕直接在 Google Colab 上開啟 Notebook：
+- **Gas_Sensing_Single.ipynb**  
+  Focuses on the analysis of gas sensing data from a single sensor device. It includes steps for data preprocessing, baseline correction, and extraction of key sensor response features to evaluate sensor performance.
 
-[![在 Colab 上開啟](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Single.ipynb)
+- **Gas_Sensing_Multiple.ipynb**  
+  Extends the analysis to multiple sensors or multiple test cycles. It supports batch data processing, comparative analysis, and statistical evaluation across sensors or repeated measurements to identify trends and variabilities.
 
-[![在 Colab 上開啟](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_3D.ipynb)
+- **Gas_Sensing_3D.ipynb**  
+  Implements three-dimensional data visualization, enabling exploration of sensor responses over time and across multiple sensors simultaneously. The interactive 3D plots help reveal complex patterns and correlations in the dataset.
 
-[![在 Colab 上開啟](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/IV_read.ipynb)
+- **IV_read.ipynb**  
+  Dedicated to reading and analyzing current-voltage (I-V) measurement data related to gas sensing devices. It parses raw I-V data files, plots characteristic curves, and extracts electrical parameters essential for understanding sensor behavior.
 
-[![在 Colab 上開啟](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Multiple.ipynb)
+## Getting Started
 
-## 📂 專案內容
-- `Gas_sensing.ipynb`：Google Colab Notebook，包含氣體感測數據分析與模擬程式碼。
-- 其他相關資料與程式碼。
+1. Click the Google Colab badges below to open the notebooks directly in the cloud environment.  
+2. Upload your gas sensing or I-V measurement data files as required by each notebook.  
+3. Execute the cells sequentially to perform analysis and generate visualizations.  
+4. Modify and customize the code to adapt to your specific experimental data or sensor types.
 
-## 🔧 如何使用
-1. 點擊上方 Colab 連結。
-2. 在 Google Colab 中執行 Notebook。
-3. 根據需求修改程式碼或上傳相關數據。
+## Google Colab Links
 
-## 📜 授權
-本專案遵循 MIT License，詳細請見 LICENSE 文件。
+[![Open Gas_Sensing_Single.ipynb in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Single.ipynb)  
+[![Open Gas_Sensing_Multiple.ipynb in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Multiple.ipynb)  
+[![Open Gas_Sensing_3D.ipynb in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_3D.ipynb)  
+[![Open IV_read.ipynb in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/IV_read.ipynb)  
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
-🔗 **GitHub Repo**：[LIANGTING-WU/Gas_Sensing](https://github.com/LIANGTING-WU/Gas_Sensing)
+**GitHub Repository:** [LIANGTING-WU/Gas_Sensing](https://github.com/LIANGTING-WU/Gas_Sensing)
