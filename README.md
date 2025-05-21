@@ -1,39 +1,44 @@
 # Gas Sensing Project
 
-This project provides a set of Python notebooks for analyzing and visualizing gas sensor data as well as electrical measurements from gas sensing experiments. The tools aim to facilitate data processing, feature extraction, and insightful visualization for various gas sensing scenarios.
+This project investigates gas sensing behavior through simulation and data analysis, focusing on surface coverage dynamics and electrical characteristics.
 
-## Notebooks Overview
+## 📂 Project Files and Descriptions
 
-- **Gas_Sensing_Single.ipynb**  
-  Focuses on the analysis of gas sensing data from a single sensor device. It includes steps for data preprocessing, baseline correction, and extraction of key sensor response features to evaluate sensor performance.
+- `Gas_Sensing_Single.ipynb`  
+  This notebook simulates and analyzes the surface coverage of a single gas molecule adsorbed on the sensor over simulation time.
 
-- **Gas_Sensing_Multiple.ipynb**  
-  Extends the analysis to multiple sensors or multiple test cycles. It supports batch data processing, comparative analysis, and statistical evaluation across sensors or repeated measurements to identify trends and variabilities.
+- `Gas_Sensing_Multiple.ipynb`  
+  This notebook studies the surface coverage of multi-component gas mixtures adsorbed on the sensor over simulation time, as well as the time-dependent changes of the system's resistance.
 
-- **Gas_Sensing_3D.ipynb**  
-  Implements three-dimensional data visualization, enabling exploration of sensor responses over time and across multiple sensors simultaneously. The interactive 3D plots help reveal complex patterns and correlations in the dataset.
+- `Gas_Sensing_3D.ipynb`  
+  This notebook examines the surface coverage of a single gas molecule adsorbed on the sensor under different temperatures and time points, with 3D visualization.
 
-- **IV_read.ipynb**  
-  Dedicated to reading and analyzing current-voltage (I-V) measurement data related to gas sensing devices. It parses raw I-V data files, plots characteristic curves, and extracts electrical parameters essential for understanding sensor behavior.
+- `IV_read.ipynb`  
+  This notebook processes data from NEGF (Non-Equilibrium Green’s Function) calculations, including current, resistance, and sensitivity analysis.
 
-## Getting Started
+## 🚀 How to Use
 
-1. Click the Google Colab badges below to open the notebooks directly in the cloud environment.  
-2. Upload your gas sensing or I-V measurement data files as required by each notebook.  
-3. Execute the cells sequentially to perform analysis and generate visualizations.  
-4. Modify and customize the code to adapt to your specific experimental data or sensor types.
+1. Open the notebooks via the Google Colab links below.  
+2. Run the notebooks sequentially to analyze gas adsorption and electrical properties.  
+3. Modify inputs and parameters according to your experimental or simulation data.
 
-## Google Colab Links
+## 📌 Google Colab Links
 
-[![Open Gas_Sensing_Single.ipynb in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Single.ipynb)  
-[![Open Gas_Sensing_Multiple.ipynb in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Multiple.ipynb)  
-[![Open Gas_Sensing_3D.ipynb in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_3D.ipynb)  
-[![Open IV_read.ipynb in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/IV_read.ipynb)  
+- [Gas_Sensing_Single.ipynb](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Single.ipynb)  
+- [Gas_Sensing_Multiple.ipynb](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Multiple.ipynb)  
+- [Gas_Sensing_3D.ipynb](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_3D.ipynb)  
+- [IV_read.ipynb](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/IV_read.ipynb)  
 
-## License
+## ⚙️ Requirements
+
+- Python 3.x  
+- Jupyter Notebook or Google Colab  
+- Packages: numpy, pandas, matplotlib, plotly, scipy, seaborn, etc. (refer to each notebook for details)
+
+## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
-**GitHub Repository:** [LIANGTING-WU/Gas_Sensing](https://github.com/LIANGTING-WU/Gas_Sensing)
+🔗 **GitHub Repository:** [LIANGTING-WU/Gas_Sensing](https://github.com/LIANGTING-WU/Gas_Sensing)
