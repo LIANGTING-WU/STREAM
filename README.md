@@ -35,10 +35,6 @@ This project investigates gas sensing behavior through simulation and data analy
 - Jupyter Notebook or Google Colab  
 - Packages: numpy, pandas, matplotlib, plotly, scipy, seaborn, etc. (refer to each notebook for details)
 
-## 📜 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 ---
 
 🔗 **GitHub Repository:** [LIANGTING-WU/Gas_Sensing](https://github.com/LIANGTING-WU/Gas_Sensing)
