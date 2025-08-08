@@ -1,6 +1,8 @@
 # STREAM: Simulation Toolkit for time-Resolved Electronic transport and gas Adsorption Modeling
 
-<img src="STREAM-LOGO.png" alt="STREAM Logo" width="250"/>
+<p align="center">
+  <img src="STREAM-LOGO.png" alt="STREAM Logo" width="250"/>
+</p>
 
 STREAM is a Python-based graphical user interface (GUI) application designed to simulate the performance of chemiresistive gas sensors. It combines kinetic modeling of gas adsorption/desorption with electronic transport data from sources like Non-Equilibrium Green's Function (NEGF) calculations to provide a comprehensive analysis toolkit for researchers and engineers in the field of gas sensing.
 
