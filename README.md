@@ -1,40 +1,112 @@
-# Gas Sensing Project
+# STREAM: Simulation Toolkit for time-Resolved Electronic transport and gas Adsorption Modeling
 
-This project investigates gas sensing behavior through simulation and data analysis, focusing on surface coverage dynamics and electrical characteristics.
+![STREAM Logo](STREAM-LOGO.png)
 
-## 📂 Project Files and Descriptions
+STREAM is a Python-based graphical user interface (GUI) application designed to simulate the performance of chemiresistive gas sensors. It combines kinetic modeling of gas adsorption/desorption with electronic transport data from sources like Non-Equilibrium Green's Function (NEGF) calculations to provide a comprehensive analysis toolkit for researchers and engineers in the field of gas sensing.
 
-- `Gas_Sensing_Single.ipynb`  
-  This notebook simulates and analyzes the surface coverage of a single gas molecule adsorbed on the sensor over simulation time.
+## Features
 
-- `Gas_Sensing_Multiple.ipynb`  
-  This notebook studies the surface coverage of multi-component gas mixtures adsorbed on the sensor over simulation time, as well as the time-dependent changes of the system's resistance.
+- **Interactive GUI**: An easy-to-use interface built with Tkinter for setting parameters, running simulations, and visualizing results in real-time.
+- **Kinetic Modeling**:
+    - Simulates single and multi-component gas adsorption and desorption dynamics over time.
+    - Calculates surface coverage based on user-defined parameters (pressure, temperature, molecule properties).
+    - Supports both mobile and immobile transition state assumptions for adsorption kinetics.
+- **Electronic Properties Analysis**:
+    - Imports and analyzes I-V data from NEGF simulation results (`.csv`).
+    - Automatically calculates and plots I-V curves, R-V curves, and sensitivity.
+    - Identifies optimal operating voltages by finding peaks in the sensitivity curves.
+- **Integrated Sensor Performance Simulation**:
+    - Simulates the total resistance of the sensor over time by combining multi-component coverage kinetics with the resistance data of each species.
+- **Advanced Analysis**:
+    - **Temperature Dependence**: Analyzes how recovery time, equilibrium constant, and equilibrium coverage change with temperature.
+    - **Selectivity Analysis**: Generates a selectivity matrix and bar charts to compare the sensor's response to different target gases versus interfering species.
+- **Data and Plot Export**:
+    - Export all generated plots as high-quality PNG images.
+    - Save simulation results (e.g., coverage vs. time, resistance vs. time) to `.dat` and `.txt` files for further analysis.
 
-- `Gas_Sensing_3D.ipynb`  
-  This notebook examines the surface coverage of a single gas molecule adsorbed on the sensor under different temperatures and time points, with 3D visualization.
+## Prerequisites
 
-- `IV_read.ipynb`  
-  This notebook processes data from NEGF (Non-Equilibrium Green’s Function) calculations, including current, resistance, and sensitivity analysis.
+Before running STREAM, ensure you have Python 3 and the following libraries installed:
 
-## 🚀 How to Use
+- NumPy
+- Pandas
+- SciPy
+- Matplotlib
 
-1. Open the notebooks via the Google Colab links below.  
-2. Run the notebooks sequentially to analyze gas adsorption and electrical properties.  
-3. Modify inputs and parameters according to your experimental or simulation data.
+You can install these dependencies using pip:
+```bash
+pip install numpy pandas scipy matplotlib
+```
+*Note: Tkinter is usually included with standard Python installations.*
 
-## 📌 Google Colab Links
+## How to Run
 
-- [Gas_Sensing_Single.ipynb](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Single.ipynb)  
-- [Gas_Sensing_Multiple.ipynb](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_Multiple.ipynb)  
-- [Gas_Sensing_3D.ipynb](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/Gas_Sensing_3D.ipynb)  
-- [IV_read.ipynb](https://colab.research.google.com/github/LIANGTING-WU/Gas_Sensing/blob/main/IV_read.ipynb)  
+1.  Clone or download the repository.
+2.  Navigate to the project directory.
+3.  Run the application from your terminal:
+    ```bash
+    python STREAM.py
+    ```
 
-## ⚙️ Requirements
+## Using the Application
 
-- Python 3.x  
-- Jupyter Notebook or Google Colab  
-- Packages: numpy, pandas, matplotlib, plotly, scipy, seaborn, etc. (refer to each notebook for details)
+The GUI is organized into three main sections: **Global Parameters**, **Molecule Parameters**, and the **Plotting Area**.
 
----
+1.  **Load Molecule Data**:
+    - Begin by loading a `molecule_parameters.csv` file using the "Load CSV" button. This file contains the physical parameters for the gas molecules you want to simulate.
+2.  **Set Global Parameters**:
+    - Adjust the simulation parameters in the "Global Parameters" section, such as pressure, temperature, and simulation time spans.
+3.  **Generate Plots**:
+    - Select one of the tabs in the plotting area (e.g., "Coverage vs. Time", "Temperature Dependence").
+    - Click the **"Generate / Update Plot"** button to run the simulation and display the results.
+4.  **Analyze Electronic Properties**:
+    - To use the "NEGF Analyzer", "Selectivity", or "Resistance vs. Time" tabs, you must first load a CSV file containing NEGF I-V data.
+    - Go to the **"NEGF Analyzer"** tab, click "Generate / Update Plot", and you will be prompted to select your NEGF results file.
+    - The tool will automatically process the data, store the results, and suggest an optimal operating voltage. This voltage can then be used for selectivity and resistance simulations.
+5.  **Export Results**:
+    - Use the "Export Current Plot" button to save the currently displayed figure.
+    - Data files (`.dat`, `.txt`) are automatically saved in the application's directory after certain simulations are run.
 
-🔗 **GitHub Repository:** [LIANGTING-WU/Gas_Sensing](https://github.com/LIANGTING-WU/Gas_Sensing)
+## Input File Formats
+
+### 1. Molecule Parameters (`molecule_parameters.csv`)
+
+This file contains the physical parameters for each gas molecule. The application uses these values for kinetic calculations.
+
+**Columns:**
+- `name`: Name of the molecule (e.g., NH3, CO).
+- `p`: Partial pressure of this gas for multi-component simulations (in bar).
+- `m`: Molar mass (in amu).
+- `Edes`: Desorption energy (in eV).
+- `sigma`: Symmetry number of the molecule.
+- `molecule_type`: `linear` or `nonlinear`.
+- `theta_rot_linear`: Rotational temperature for linear molecules (in K).
+- `theta_rot_A`, `theta_rot_B`, `theta_rot_C`: Rotational temperatures for nonlinear molecules (in K).
+
+**Example:**
+```csv
+name,p,m,Edes,sigma,molecule_type,theta_rot_linear,theta_rot_A,theta_rot_B,theta_rot_C
+H2,1,2.016,0.8,2,linear,87.6,0,0,0
+NH3,1,17.031,1.2,3,nonlinear,0,13.6,13.6,9.07
+```
+
+### 2. NEGF Results (`NEGF_result.csv`)
+
+This file contains the current-voltage (I-V) data from your electronic structure calculations.
+
+**Format:**
+- The first column must be **Voltage (V)**.
+- The second column must be the current for the **pristine (unfunctionalized) material**.
+- Subsequent columns should be the current for the material with a specific gas molecule adsorbed. The column header will be used as the species name.
+
+**Example:**
+```csv
+Voltage,Pristine,NH3,CO
+0.1,0.05,0.04,0.045
+0.2,0.10,0.08,0.09
+...
+```
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
