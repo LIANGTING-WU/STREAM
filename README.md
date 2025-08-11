@@ -1,4 +1,4 @@
-# STREAM: Simulation Toolkit for time-Resolved Electronic transport and gas Adsorption Modeling
+# STREAM: Simulation toolkit for Time-Resolved Electronic transport and gas Adsorption Modeling
 
 <p align="center">
   <img src="STREAM-LOGO.png" alt="STREAM Logo" width="250"/>
