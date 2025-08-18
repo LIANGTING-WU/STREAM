@@ -30,6 +30,12 @@ STREAM is a Python-based graphical user interface (GUI) application designed to 
     - Export all generated plots as high-quality PNG images.
     - Save simulation results (e.g., coverage vs. time, resistance vs. time) to `.dat` and `.txt` files for further analysis.
 
+## Flowchart
+
+The following flowchart illustrates the theoretical framework and calculation process within the STREAM application. It details the kinetic models used for adsorption/desorption rates and the subsequent steps to determine sensor resistance, coverage, and selectivity.
+
+![STREAM Flowchart](flowchart.png)
+
 ## Prerequisites
 
 Before running STREAM, ensure you have Python 3 and the following libraries installed:
