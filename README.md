@@ -34,7 +34,9 @@ STREAM is a Python-based graphical user interface (GUI) application designed to 
 
 The following flowchart illustrates the theoretical framework and calculation process within the STREAM application. It details the kinetic models used for adsorption/desorption rates and the subsequent steps to determine sensor resistance, coverage, and selectivity.
 
-![STREAM Flowchart](flowchart.png)
+<p align="center">
+  <img src="flowchart.png" alt="STREAM Flowchart" width="400"/>
+</p>
 
 ## Prerequisites
 
