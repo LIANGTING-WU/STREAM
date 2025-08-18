@@ -80,7 +80,7 @@ The GUI is organized into three main sections: **Global Parameters**, **Molecule
 This file contains the physical parameters for each gas molecule. The application uses these values for kinetic calculations.
 
 **Columns:**
-- `name`: Name of the molecule (e.g., NH3, CO).
+- `name`: Name of the molecule (e.g., NH<sub>3</sub>, CO).
 - `p`: Partial pressure of this gas for multi-component simulations (in bar).
 - `m`: Molar mass (in amu).
 - `Edes`: Desorption energy (in eV).
