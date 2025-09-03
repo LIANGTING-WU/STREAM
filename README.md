@@ -1,4 +1,5 @@
 If you use this STREAM code to help your research, please cite the following article:
+
 Liang-Ting Wu and Jyh-Chiang Jiang. Designing highly selective NO<sub>2</sub> and SO<sub>3</sub> sensors via doped and substituted polythiophene: a DFT, NEGF, and microkinetic study. *J. Mater. Chem. A*, **2025**, accepted.
 [https://doi.org/10.1039/D5TA04096E](https://doi.org/10.1039/D5TA04096E)
 
